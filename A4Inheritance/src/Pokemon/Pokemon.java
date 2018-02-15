@@ -32,6 +32,9 @@ import javax.swing.JOptionPane;
         public enum OGmoves{
 		Leer, Tackle, Scratch, Pound;
 	} // end gender
+        public enum Type{
+		Grass, Fire, Water;
+	} // end gender
         
         
 	 	 	
@@ -42,7 +45,8 @@ import javax.swing.JOptionPane;
 	 private int lifeSpan = 0;			
 	 private Gender gender = null;	
          private Rarity rarity = null;	
-         private OGmoves ogmoves = null;
+         private OGmoves ogmoves = null;	
+         private Type type = null;	
 	  
  	// ********** constructors ***********
 /*****************************************************
@@ -56,13 +60,14 @@ import javax.swing.JOptionPane;
  Returns: na
  *****************************************************/
 	 public Pokemon(String n, int ls, Gender g, 
-			 Rarity r, OGmoves og){
+			 Rarity r, OGmoves og, Type t){
                  id = nextID++;
                  name = n;
 		 lifeSpan = ls;
 		 gender = g;
 		 rarity = r;
                  ogmoves = og;
+                 type = t;
 	 } // and initialized constructor
 
 /*****************************************************
@@ -103,6 +108,9 @@ import javax.swing.JOptionPane;
         public OGmoves getOgmoves() {
             return ogmoves;
         }
+         public Type getType() {
+            return type;
+        }
 
  	// ********** mutators **********
 
@@ -132,6 +140,10 @@ import javax.swing.JOptionPane;
 
         public void setOgmoves(OGmoves ogmoves) {
             this.ogmoves = ogmoves;
+        }
+
+        public void setType(Type type) {
+            this.type = type;
         }
 
  }  // end class

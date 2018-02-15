@@ -16,12 +16,16 @@ package Pokemon;
  
  // import java libraries here as needed
  
+import Pokemon.Fire.FireMoves;
+import Pokemon.Grass.GrassMoves;
 import Pokemon.Pokemon.Gender;
 import Pokemon.Pokemon.OGmoves;
 import Pokemon.Pokemon.Rarity;
- import javax.swing.*;
- import java.text.DecimalFormat;
- import java.io.*; 					// import file io libraries
+import Pokemon.Pokemon.Type;
+import Pokemon.Water.WaterMoves;
+import javax.swing.*;
+import java.text.DecimalFormat;
+import java.io.*; 			// import file io libraries
  
 
 public class PokemonClient {  // begin class
@@ -45,10 +49,10 @@ public class PokemonClient {  // begin class
     
         ProgramInfo programInfo = new ProgramInfo();
         
-    	Pokemon poke = new Pokemon("Pokemon", 15, Gender.Female, Rarity.Common, OGmoves.Pound);
-        Pokemon bulb= new Pokemon("Pokemon", 8, Gender.Male, Rarity.Legendary, OGmoves.Leer);
-        Pokemon charm = new Pokemon("Pokemon", 1, Gender.Male, Rarity.Rare, OGmoves.Scratch);
-        Pokemon squirt = new Pokemon("Pokemon", 12, Gender.Female, Rarity.Common, OGmoves.Tackle);
+    	Fire pokey = new Fire("Pokey", 15, Gender.Female, Rarity.Common, OGmoves.Pound,Type.Fire, FireMoves.Roast);
+        Grass bulb = new Grass("Bulbasaur", 8, Gender.Male, Rarity.Legendary, OGmoves.Leer, Type.Grass, GrassMoves.FrenzyPlant);
+        Fire charm = new Fire("Charmander", 1, Gender.Male, Rarity.Rare, OGmoves.Scratch, Type.Fire, FireMoves.Scorch);
+        Water squirt = new Water("Squirtle", 12, Gender.Female, Rarity.Common, OGmoves.Tackle, Type.Water, WaterMoves.Splash);
     // ********** Print output Banner **********
 	
 		strout = programInfo.getBanner("A4 Inheritance");
@@ -56,18 +60,49 @@ public class PokemonClient {  // begin class
  	    	
     // ************************ get input **********************
 
-
-
     // ************************ processing ***************************
     
     // ************************ print output ****************************
+    
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println("ID: " + pokey.getId());        
+        System.out.println("Name: " + pokey.getName());        
+        System.out.println("Rarity: " + pokey.getRarity());
+        System.out.println("Lifespan: " + pokey.getLifeSpan());
+        System.out.println("Gender: " + pokey.getGender());
+        System.out.println("Move: " + pokey.getOgmoves());
+        System.out.println("Fire Move: " + charm.getFiremoves());
+        System.out.println("Type: " + charm.getType());
+         
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println("ID: " + bulb.getId());        
+        System.out.println("Name: " + bulb.getName());        
+        System.out.println("Rarity: " + bulb.getRarity());
+        System.out.println("Lifespan: " + bulb.getLifeSpan());
+        System.out.println("Gender: " + bulb.getGender());
+        System.out.println("Move: " + bulb.getOgmoves());
+        System.out.println("Grass Move: " + bulb.getGrassmoves());
+        System.out.println("Type: " + bulb.getType());
         
-        System.out.println("ID: " + poke.getId());        
-        System.out.println("Name: " + poke.getName());        
-        System.out.println("Rarity: " + poke.getRarity());
-        System.out.println("Lifespan: " + poke.getLifeSpan());
-        System.out.println("Gender: " + poke.getGender());
-        System.out.println("Move: " + poke.getOgmoves());
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println("ID: " + charm.getId());        
+        System.out.println("Name: " + charm.getName());        
+        System.out.println("Rarity: " + charm.getRarity());
+        System.out.println("Lifespan: " + charm.getLifeSpan());
+        System.out.println("Gender: " + charm.getGender());
+        System.out.println("Original Move: " + charm.getOgmoves());
+        System.out.println("Fire Move: " + charm.getFiremoves());
+        System.out.println("Type: " + charm.getType());
+        
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println("ID: " + squirt.getId());        
+        System.out.println("Name: " + squirt.getName());        
+        System.out.println("Rarity: " + squirt.getRarity());
+        System.out.println("Lifespan: " + squirt.getLifeSpan());
+        System.out.println("Gender: " + squirt.getGender());
+        System.out.println("Move: " + squirt.getOgmoves());
+        System.out.println("Water Move: " + squirt.getWatermoves());
+        System.out.println("Type: " + squirt.getType() + "\n!!!!!!!!!!!!!!!!!!!!!!!!!" );
     
         // ******** closing message *********
         

@@ -33,7 +33,7 @@ import javax.swing.JOptionPane;
 		Leer, Tackle, Scratch, Pound;
 	} // end gender
         public enum Type{
-		Grass, Fire, Water;
+		Grass, Dragon, Water;
 	} // end gender
         
         
